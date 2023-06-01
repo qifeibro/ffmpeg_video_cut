@@ -10,7 +10,7 @@ file 'video3.mp4'
 ```
 ffmpeg -f concat -safe 0 -i videos.txt -c copy output.mp4
 ```
-此命令使用`concat`过滤器连接`videos.txt`中列出的视频。该`-safe 0`选项允许 ffmpeg 读取具有相对路径的文件。该`-c copy`选项无需重新编码即可复制视频和音频流，这样速度更快并保持原始质量。输出保存到`output.mp4`.
+此命令使用`concat`过滤器连接`videos.txt`中列出的视频。该`-safe 0`选项允许 ffmpeg 读取具有相对路径的文件，所以`-safe 0`选项可以省略。该`-c copy`选项无需重新编码即可复制视频和音频流，这样速度更快并保持原始质量。输出保存到`output.mp4`.
 
 3.  命令完成运行后，输出视频`output.mp4`将包含连接在一起的所有三个视频。
 
